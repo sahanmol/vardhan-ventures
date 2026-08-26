@@ -25,31 +25,31 @@ const services = [
     icon: Code2,
     number: '01',
     title: 'Website development',
-    text: 'Custom business websites, landing pages, and e-commerce stores designed to turn attention into action. Built fast, mobile-friendly, and SEO-ready.',
+    text: 'Digital homes that turn attention into action. Built fast, mobile-friendly, and built to last.',
     tags: ['Landing pages', 'E-commerce', 'Web apps', 'SEO-ready'],
     image:
       'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85',
-    alt: 'Modern website development and responsive web design preview',
+    alt: 'Modern website development and responsive web design',
   },
   {
     icon: Sparkles,
     number: '02',
     title: 'AI solutions',
-    text: 'Useful intelligence for the work that matters. Automate repetitive tasks, deploy smart chatbots, and amplify your business operations.',
+    text: 'Useful intelligence for the work that matters. Automate the ordinary, amplify the ambitious.',
     tags: ['AI strategy', 'Automation', 'Chatbots', 'Data systems'],
     image:
       'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85',
-    alt: 'Practical AI solutions and workflow automation visualization',
+    alt: 'Practical AI solutions and automation systems',
   },
   {
     icon: Megaphone,
     number: '03',
     title: 'Digital marketing',
-    text: 'Results-driven marketing campaigns in Patna and beyond. Reach your ideal customers through targeted Google Ads, Social Media, and Local SEO.',
-    tags: ['Social media', 'Google Ads', 'Local SEO', 'Content'],
+    text: 'Campaigns with a pulse. Reach the right people, then give them a reason to stay.',
+    tags: ['Social media', 'Google Ads', 'SEO', 'Content'],
     image:
       'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85',
-    alt: 'Digital marketing strategy, SEO growth, and lead generation',
+    alt: 'Digital marketing strategy and growth campaigns',
   },
 ]
 
@@ -61,7 +61,7 @@ const work = [
     accent: 'ARTISANAL. WARM. REAL.',
     url: 'https://iamm-groot-in.vercel.app/',
     image: 'https://iamm-groot-in.vercel.app/images/hero.png',
-    alt: 'IamGroot.in artisanal bakery website showcase by Vardhan Ventures',
+    alt: 'IamGroot.in artisanal bakery website preview',
   },
   {
     type: 'ceramics',
@@ -71,7 +71,7 @@ const work = [
     url: 'https://saranceramics.netlify.app/',
     image:
       'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80',
-    alt: 'Saran Ceramics e-commerce store design and development',
+    alt: 'Saran Ceramics e-commerce store preview',
   },
   {
     type: 'versz',
@@ -80,7 +80,7 @@ const work = [
     accent: 'THINK. DEBATE. EVOLVE.',
     url: 'https://versz.app/',
     image: '/versz-home.png',
-    alt: 'Versz AI-powered interactive debate platform built by Vardhan Ventures',
+    alt: 'Versz AI-powered debate platform preview',
   },
 ]
 
@@ -134,11 +134,11 @@ function App() {
           <a
             className="brand"
             href="#top"
-            aria-label="Vardhan Ventures Pvt. Ltd. - Back to top"
+            aria-label="Vardhan Ventures - Back to top"
           >
             <img
               src="/vardhan-logo.svg"
-              alt="Vardhan Ventures Pvt. Ltd. - Website Development & Digital Marketing Agency"
+              alt="Vardhan Ventures"
               width="176"
               height="40"
             />
@@ -187,17 +187,17 @@ function App() {
         <section className="hero" id="about" aria-label="Introduction">
           <div className="hero-copy">
             <p className="eyebrow">
-              <span className="pulse" /> Website &amp; Digital Growth Agency
+              <span className="pulse" /> What we provide
             </p>
             <h1>
-              Website Development &amp;
+              One partner.
               <br />
-              <span>Digital Growth in Patna.</span>
+              <span>Every move.</span>
             </h1>
             <p className="hero-text">
-              Vardhan Ventures Pvt. Ltd. gives your business the digital engine
-              it needs to grow: high-converting websites, practical AI systems,
-              and result-oriented digital marketing in Patna, Bihar and beyond.
+              Vardhan Ventures gives your business the digital engine it needs
+              to grow: high-converting websites, practical AI systems, and
+              marketing with direction.
             </p>
             <div className="hero-actions">
               <a
@@ -248,9 +248,9 @@ function App() {
             <b>✦</b>
             <span>DIGITAL THAT MOVES</span>
             <b>✦</b>
-            <span>WEBSITES &amp; AI SOLUTIONS</span>
+            <span>IDEAS INTO IMPACT</span>
             <b>✦</b>
-            <span>GROWTH IN PATNA &amp; BEYOND</span>
+            <span>DIGITAL THAT MOVES</span>
             <b>✦</b>
           </div>
         </section>
@@ -266,9 +266,8 @@ function App() {
             </h2>
             <div className="heading-rule" />
             <p>
-              Professional website development, AI solutions, and digital
-              marketing designed to elevate your business presence in Patna and
-              drive real conversions.
+              Websites, AI systems, and marketing built around one goal: moving
+              your business forward.
             </p>
           </div>
 
@@ -375,9 +374,9 @@ function App() {
               <span>spark into signal.</span>
             </h2>
             <p>
-              We combine sharp strategic thinking, modern web engineering, and
-              practical AI to move your idea from a loose concept into a digital
-              asset that delivers results.
+              We combine sharp thinking, practical AI, and careful execution to
+              move your idea from a loose thought to a digital product people
+              want to use.
             </p>
             <a
               className="button"
@@ -507,15 +506,15 @@ function App() {
         {/* Contact Section */}
         <section className="section contact" id="contact" aria-label="Contact Us">
           <div className="contact-intro">
-            <p className="eyebrow">Ready to start?</p>
+            <p className="eyebrow">Have a good one?</p>
             <h2>
               Let’s make
               <br />
               <span>something great.</span>
             </h2>
             <p>
-              Tell us about your next project in Patna, Bihar or anywhere
-              worldwide. We will respond within one business day.
+              Tell us a little about what’s next. We’ll get back to you within
+              two business days.
             </p>
             <a
               className="email"
@@ -536,7 +535,7 @@ function App() {
               <input
                 name="name"
                 required
-                placeholder="Your full name"
+                placeholder="Your name"
                 autoComplete="name"
               />
             </label>
@@ -555,7 +554,7 @@ function App() {
               <input
                 name="phone"
                 type="tel"
-                placeholder="+91 98765 43210"
+                placeholder="+91 00000 00000"
                 autoComplete="tel"
               />
             </label>
@@ -566,9 +565,8 @@ function App() {
                   Select a service
                 </option>
                 <option>Website development</option>
-                <option>E-commerce website</option>
                 <option>AI solutions</option>
-                <option>Digital marketing &amp; SEO</option>
+                <option>Digital marketing</option>
                 <option>Something else</option>
               </select>
             </label>
@@ -578,7 +576,7 @@ function App() {
                 name="message"
                 required
                 rows="3"
-                placeholder="A few words about your business goals and requirements..."
+                placeholder="A few words about your project..."
               />
             </label>
             <button className="button primary" type="submit">
@@ -592,10 +590,10 @@ function App() {
       {/* Floating WhatsApp Action */}
       <a
         className="whatsapp-float"
-        href="https://wa.me/919473295260?text=Hi%20Vardhan%20Ventures%2C%20I%20want%20to%20discuss%20a%20website%20development%20or%20marketing%20project."
+        href="https://wa.me/919473295260?text=Hi%20Vardhan%20Ventures%2C%20I%20want%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with Vardhan Ventures Pvt. Ltd. on WhatsApp"
+        aria-label="Chat with Vardhan Ventures on WhatsApp"
         title="Chat on WhatsApp"
         onClick={() =>
           trackEvent('whatsapp_click', {
@@ -617,18 +615,19 @@ function App() {
             <a
               className="brand"
               href="#top"
-              aria-label="Vardhan Ventures Pvt. Ltd."
+              aria-label="Vardhan Ventures"
             >
               <img
                 src="/vardhan-logo.svg"
-                alt="Vardhan Ventures Pvt. Ltd. - Digital Agency in Patna"
+                alt="Vardhan Ventures"
                 width="218"
                 height="48"
               />
             </a>
             <p>
-              High-converting websites, AI solutions, and digital marketing
-              moving businesses forward in Patna, Bihar &amp; beyond.
+              Digital experiences that move
+              <br />
+              businesses forward.
             </p>
           </div>
 
@@ -643,9 +642,9 @@ function App() {
 
           <div className="footer-column">
             <h3>Services</h3>
-            <a href="#services">Website Development in Patna</a>
-            <a href="#services">AI Solutions &amp; Automation</a>
-            <a href="#services">Digital Marketing &amp; SEO</a>
+            <a href="#services">Website Development</a>
+            <a href="#services">AI Solutions</a>
+            <a href="#services">Digital Marketing</a>
           </div>
 
           <div className="footer-column footer-contact">
@@ -670,7 +669,7 @@ function App() {
             >
               +91 94732 95260
             </a>
-            <span>Patna, Bihar, India</span>
+            <span>India</span>
             <div className="social-links">
               <a
                 href="https://www.instagram.com/vardhan.ventures"
@@ -699,7 +698,7 @@ function App() {
         </div>
 
         <div className="footer-bottom">
-          <small>© 2026 Vardhan Ventures Pvt. Ltd. All rights reserved.</small>
+          <small>© 2026 Vardhan Ventures. All rights reserved.</small>
           <div>
             <a href="#top">Privacy</a>
             <span>·</span>
