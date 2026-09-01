@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- 3D Prism Icon (Left) -->
+  <g transform="translate(40, 20)">
+    <!-- 3D Prism Facet 1: Left Face (Royal Blue) -->
+    <polygon points="80,16 20,136 80,88" fill="#0052cc" stroke="#0052cc" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- 3D Prism Facet 2: Right Face (Electric Purple) -->
+    <polygon points="80,16 140,136 80,88" fill="#6554c0" stroke="#6554c0" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- 3D Prism Facet 3: Bottom Base (Electric Cyan) -->
+    <polygon points="20,136 140,136 80,88" fill="#00b8d9" stroke="#00b8d9" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- Center Reflection Diamond -->
+    <polygon points="80,48 94,88 80,80 66,88" fill="#ffffff" opacity="0.95" />
+    <circle cx="80,16" r="5" fill="#00b8d9" />
+  </g>
+  
+  <!-- Text: Prismix Digital -->
+  <text x="210" y="115" fill="#172b4d" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="74" font-weight="800" letter-spacing="-2">Prism<tspan fill="#0052cc">ix</tspan></text>
+  <text x="465" y="115" fill="#6b778c" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="74" font-weight="400" letter-spacing="-1">Digital</text>
+  <text x="212" y="152" fill="#7a869a" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" letter-spacing="4">WEBSITES • AI • PERFORMANCE</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="112" fill="#ffffff" stroke="#dfe1e6" stroke-width="8" />
+  
+  <!-- 3D Prism Facet 1: Left Face (Royal Blue) -->
+  <polygon points="256,64 74,420 256,280" fill="#0052cc" stroke="#0052cc" stroke-width="6" stroke-linejoin="round" />
+  
+  <!-- 3D Prism Facet 2: Right Face (Electric Purple) -->
+  <polygon points="256,64 438,420 256,280" fill="#6554c0" stroke="#6554c0" stroke-width="6" stroke-linejoin="round" />
+  
+  <!-- 3D Prism Facet 3: Bottom Base Refraction (Electric Cyan) -->
+  <polygon points="74,420 438,420 256,280" fill="#00b8d9" stroke="#00b8d9" stroke-width="6" stroke-linejoin="round" />
+  
+  <!-- Center Core Refraction Diamond (Pure White Light Reflection) -->
+  <polygon points="256,150 302,280 256,254 210,280" fill="#ffffff" opacity="0.95" />
+  
+  <!-- Apex Sparkle Point -->
+  <circle cx="256,64" r="18" fill="#00b8d9" />
+</svg>
