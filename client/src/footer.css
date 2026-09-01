@@ -1,66 +1,139 @@
-.site-shell > footer {
-  max-width: none;
-  padding: 0 max(32px, calc((100vw - 1176px) / 2));
-  display: block;
-  background: #0a1024;
-  border-top: 1px solid #334466;
+/* ==========================================================================
+   footer.css — Enterprise Atlassian-Grade Footer Styles
+   ========================================================================== */
+
+footer {
+  background: linear-gradient(180deg, #f8faff 0%, #f1f5fd 100%);
+  border-top: 1px solid var(--border);
+  padding: 0 max(var(--pad-x), calc((100vw - var(--max-w)) / 2));
+  position: relative;
+  overflow: hidden;
 }
+
+/* Subtle grid texture in footer */
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,82,204,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,82,204,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Pre-Footer CTA Strip
+   ========================================================================== */
+
+.footer-cta-strip {
+  max-width: var(--max-w);
+  margin: 48px auto 0;
+  padding: 28px 36px;
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(0,82,204,0.15);
+  background: #ffffff;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-strip-text h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+  margin: 0 0 4px;
+}
+
+.cta-strip-text p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.cta-strip-actions {
+  flex-shrink: 0;
+}
+
+.cta-strip-actions .button.primary {
+  padding: 11px 22px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   Main Footer 4 Columns
+   ========================================================================== */
 
 .footer-main {
-  max-width: 1176px;
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 68px 0 58px;
+  padding: 56px 0 48px;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.2fr 1.4fr;
-  gap: 42px;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 48px;
 }
 
-.footer-brand .brand {
-  margin-bottom: 25px;
-}
-
-.footer-brand .brand img {
-  display: block;
-  width: 218px;
-  height: auto;
-}
-
-.footer-brand > p {
-  color: #aab4d4;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.footer-column {
+/* Brand Column */
+.footer-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 13px;
 }
 
-.footer-column h3 {
-  margin: 0 0 9px;
-  color: #68e5d0;
-  font: 10px 'DM Mono';
-  letter-spacing: 1.2px;
+.footer-brand .brand {
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.footer-brand-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  max-width: 280px;
+}
+
+.footer-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e3fcef;
+  border: 1px solid rgba(0,102,68,0.2);
+  color: #006644;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.footer-social {
+  margin-top: 0;
+}
+
+.footer-contact-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-}
-
-.footer-column a,
-.footer-column span {
-  color: #aab4d4;
-  font-size: 12px;
-  transition: color 0.2s;
-}
-
-.footer-column a:hover {
-  color: var(--acid);
+  color: var(--subtle);
+  margin: 0 0 8px;
 }
 
 .social-links {
   display: flex;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 8px;
 }
 
 .social-links a {
@@ -68,66 +141,171 @@
   height: 36px;
   display: grid;
   place-items: center;
-  color: #f4f1ea;
-  font-size: 16px;
-  border: 1px solid #52638d;
-  border-radius: 50%;
-  padding: 0;
+  color: var(--muted);
+  font-size: 15px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  transition: color 0.15s, border-color 0.15s, background 0.15s, transform 0.15s;
 }
 
 .social-links a:hover {
-  color: #10140f;
-  background: var(--acid);
-  border-color: var(--acid);
+  transform: translateY(-2px);
 }
 
+.social-links a:nth-child(1):hover {
+  color: #e1306c;
+  border-color: #e1306c;
+  background: #fce4ec;
+}
+
+.social-links a:nth-child(2):hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+
+.social-links a:nth-child(3):hover {
+  color: #25d366;
+  border-color: #25d366;
+  background: #e8f8ef;
+}
+
+/* Navigation Columns */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-column h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.footer-column a {
+  color: var(--ink-2);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.footer-column a:hover {
+  color: var(--blue);
+  transform: translateX(2px);
+}
+
+/* Contact Column with Icon rows */
+.footer-contact {
+  gap: 14px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  background: #ffffff;
+  border: 1px solid rgba(0,82,204,0.18);
+  color: var(--blue);
+  margin-top: 1px;
+}
+
+.footer-contact-item > div > a,
+.footer-contact-item > div > span {
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.15s;
+  word-break: break-word;
+}
+
+.footer-contact-item > div > a:hover {
+  color: var(--blue);
+}
+
+/* ==========================================================================
+   Footer Bottom Bar
+   ========================================================================== */
+
 .footer-bottom {
-  max-width: 1176px;
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 20px 0 24px;
+  padding: 22px 0 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #263556;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.footer-bottom small,
-.footer-bottom a,
-.footer-bottom span {
-  font: 10px 'DM Mono';
-  color: #7584a8;
+.footer-bottom small {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--subtle);
 }
 
-.footer-bottom div {
+.footer-bottom-links {
   display: flex;
-  gap: 9px;
+  gap: 10px;
+  align-items: center;
 }
 
-.footer-bottom a:hover {
-  color: var(--acid);
+.footer-bottom-links a,
+.footer-bottom-links span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--subtle);
+  text-decoration: none;
+  transition: color 0.15s;
 }
 
-@media (max-width: 700px) {
-  .site-shell > footer {
-    padding: 0 20px;
+.footer-bottom-links a:hover {
+  color: var(--blue);
+}
+
+/* Responsive Footer */
+@media (max-width: 960px) {
+  .footer-cta-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    margin-top: 36px;
   }
 
   .footer-main {
-    padding: 48px 0 38px;
     grid-template-columns: 1fr 1fr;
-    gap: 38px 20px;
+    gap: 36px;
+    padding: 40px 0 36px;
   }
+}
 
-  .footer-brand {
-    grid-column: 1 / -1;
+@media (max-width: 600px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .footer-bottom {
-    display: block;
-    line-height: 2;
-  }
-
-  .footer-bottom div {
-    margin-top: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
