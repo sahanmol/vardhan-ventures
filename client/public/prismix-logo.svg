@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+  <!-- 3D Prism Icon -->
+  <g transform="translate(10, 8)">
+    <polygon points="32,6 8,56 32,38" fill="#0052cc" stroke="#0052cc" stroke-width="1.5" stroke-linejoin="round" />
+    <polygon points="32,6 56,56 32,38" fill="#6554c0" stroke="#6554c0" stroke-width="1.5" stroke-linejoin="round" />
+    <polygon points="8,56 56,56 32,38" fill="#00b8d9" stroke="#00b8d9" stroke-width="1.5" stroke-linejoin="round" />
+    <polygon points="32,18 38,38 32,34 26,38" fill="#ffffff" opacity="0.95" />
+    <circle cx="32" cy="6" r="2.5" fill="#00b8d9" />
+  </g>
+  <!-- Text: Prismix -->
+  <text x="84" y="52" fill="#172b4d" font-family="Inter, -apple-system, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.8">Prism<tspan fill="#0052cc">ix</tspan></text>
+</svg>

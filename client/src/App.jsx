@@ -33,8 +33,8 @@ function sanitizeInput(str, maxLen = 500) {
     .slice(0, maxLen)
 }
 
-// Double-V diamond logo mark
-function BrandLogo({ size = 36 }) {
+// Modern 3D Faceted Prism Logo Mark (Vibrant, High-Contrast & Crisp)
+function BrandLogo({ size = 34 }) {
   return (
     <svg
       width={size}
@@ -43,40 +43,40 @@ function BrandLogo({ size = 36 }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
+      style={{ display: 'block', flexShrink: 0 }}
     >
-      <defs>
-        <linearGradient id="vv-grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#172b4d" />
-          <stop offset="1" stopColor="#0052cc" />
-        </linearGradient>
-      </defs>
-      {/*
-        Upper V: outer tips at top (y=4), center tip dips deep to y=58
-        Lower V: outer tips at bottom (y=76), center tip rises high to y=22
-        The two V's cross at y=40 (midpoint), forming a clear diamond:
-          Top    = (40, 22)
-          Bottom = (40, 58)
-          Left   = (28, 40)
-          Right  = (52, 40)
-      */}
-      {/* Upper V — points downward */}
-      <polyline
-        points="4,4 40,58 76,4"
-        stroke="url(#vv-grad)"
-        strokeWidth="7"
-        strokeLinecap="round"
+      {/* 3D Prism Facet 1: Left Face (Royal Blue) */}
+      <polygon
+        points="40,8 10,68 40,44"
+        fill="#0052cc"
+        stroke="#0052cc"
+        strokeWidth="1.5"
         strokeLinejoin="round"
-        fill="none"
       />
-      {/* Lower V — points upward (inverted) */}
-      <polyline
-        points="4,76 40,22 76,76"
-        stroke="url(#vv-grad)"
-        strokeWidth="7"
-        strokeLinecap="round"
+      {/* 3D Prism Facet 2: Right Face (Electric Purple) */}
+      <polygon
+        points="40,8 70,68 40,44"
+        fill="#6554c0"
+        stroke="#6554c0"
+        strokeWidth="1.5"
         strokeLinejoin="round"
-        fill="none"
       />
+      {/* 3D Prism Facet 3: Bottom Base Refraction (Electric Cyan) */}
+      <polygon
+        points="10,68 70,68 40,44"
+        fill="#00b8d9"
+        stroke="#00b8d9"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      {/* Center Refraction Core (Bright Pure Accent) */}
+      <polygon
+        points="40,24 48,44 40,40 32,44"
+        fill="#ffffff"
+        opacity="0.95"
+      />
+      {/* Apex Sparkle Point */}
+      <circle cx="40" cy="8" r="3" fill="#00b8d9" />
     </svg>
   )
 }
@@ -299,7 +299,7 @@ function App() {
 
     try {
       const response = await fetch(
-        'https://formsubmit.co/ajax/hello.vardhanventures@gmail.com',
+        'https://formsubmit.co/ajax/info.prismix.digital@gmail.com',
         {
           method: 'POST',
           headers: {
@@ -335,11 +335,11 @@ function App() {
           <a
             className="brand"
             href="#top"
-            aria-label="Vardhan Ventures - Back to top"
+            aria-label="Prismix Digital - Back to top"
           >
-            <BrandLogo size={38} />
+            <BrandLogo size={36} />
             <span className="brand-text">
-              Vardhan<strong> Ventures</strong>
+              Prism<strong>ix</strong>
             </span>
           </a>
 
@@ -396,8 +396,8 @@ function App() {
               </h1>
               <p className="hero-text">
                 From high-converting websites to AI-powered automation and
-                performance marketing — Vardhan Ventures is the one partner
-                Patna's startups and businesses trust to go digital and grow fast.
+                performance marketing — Prismix is the one partner
+                modern businesses and startups trust to scale fast.
               </p>
               <div className="hero-actions">
                 <a
@@ -441,7 +441,7 @@ function App() {
                 <div className="dash-dots">
                   <span /><span /><span />
                 </div>
-                <span className="dash-title">vardhanventures — Dashboard</span>
+                <span className="dash-title">prismix — Dashboard</span>
               </div>
 
               {/* Service cards */}
@@ -722,10 +722,10 @@ function App() {
           </div>
         </section>
 
-        {/* Why Choose Us / Comparison Grid (Option 3) */}
-        <section className="section comparison" id="why-us" aria-label="Why Choose Vardhan Ventures">
+        {/* Why Choose Us / Comparison Grid */}
+        <section className="section comparison" id="why-us" aria-label="Why Choose Prismix">
           <div className="section-heading">
-            <p className="eyebrow">The Vardhan Ventures Advantage</p>
+            <p className="eyebrow">The Prismix Advantage</p>
             <h2>
               Why growing businesses
               <br />
@@ -762,11 +762,11 @@ function App() {
               </ul>
             </div>
 
-            {/* Vardhan Ventures (Featured) */}
+            {/* Prismix (Featured) */}
             <div className="comparison-card featured-option">
               <div className="comp-popular-tag">Recommended Partner</div>
               <div className="comp-card-header">
-                <span className="comp-badge-highlight">Vardhan Ventures</span>
+                <span className="comp-badge-highlight">Prismix Digital</span>
                 <h3>Agile, Direct &amp; High-ROI</h3>
                 <p>Founder-led sprints engineered for real business scale</p>
               </div>
@@ -1073,15 +1073,15 @@ function App() {
                 <div>
                   <span className="quick-card-label">Direct Email</span>
                   <a
-                    href="mailto:hello.vardhanventures@gmail.com"
+                    href="mailto:info.prismix.digital@gmail.com"
                     className="quick-card-val"
                     onClick={() =>
                       trackEvent('email_click', {
-                        email: 'hello.vardhanventures@gmail.com',
+                        email: 'info.prismix.digital@gmail.com',
                       })
                     }
                   >
-                    hello.vardhanventures@gmail.com
+                    info.prismix.digital@gmail.com
                   </a>
                 </div>
               </div>
@@ -1313,10 +1313,10 @@ function App() {
       {/* Floating WhatsApp Action */}
       <a
         className="whatsapp-float"
-        href="https://wa.me/919473295260?text=Hi%20Vardhan%20Ventures%2C%20I%20want%20to%20discuss%20a%20project."
+        href="https://wa.me/919473295260?text=Hi%20Prismix%2C%20I%20want%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with Vardhan Ventures on WhatsApp"
+        aria-label="Chat with Prismix on WhatsApp"
         title="Chat on WhatsApp"
         onClick={() =>
           trackEvent('whatsapp_click', {
@@ -1361,11 +1361,11 @@ function App() {
             <a
               className="brand"
               href="#top"
-              aria-label="Vardhan Ventures - Back to top"
+              aria-label="Prismix Digital - Back to top"
             >
               <BrandLogo size={36} />
               <span className="brand-text">
-                Vardhan<strong> Ventures</strong>
+                Prism<strong>ix</strong>
               </span>
             </a>
             <p className="footer-brand-desc">
@@ -1382,10 +1382,10 @@ function App() {
               <p className="footer-contact-label">Follow us</p>
               <div className="social-links">
                 <a
-                  href="https://www.instagram.com/vardhan.ventures"
+                  href="https://www.instagram.com/prismix.digital"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Follow Vardhan Ventures on Instagram"
+                  aria-label="Follow Prismix on Instagram"
                   onClick={() =>
                     trackEvent('social_click', { platform: 'instagram' })
                   }
@@ -1393,10 +1393,10 @@ function App() {
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://www.facebook.com/share/1Hcgc61FQW/"
+                  href="https://www.facebook.com/prismix"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Follow Vardhan Ventures on Facebook"
+                  aria-label="Follow Prismix on Facebook"
                   onClick={() =>
                     trackEvent('social_click', { platform: 'facebook' })
                   }
@@ -1431,7 +1431,7 @@ function App() {
           {/* Col 3: Company */}
           <div className="footer-column">
             <h3>Company</h3>
-            <a href="#about">About Vardhan Ventures</a>
+            <a href="#about">About Prismix</a>
             <a href="#work">Case Studies &amp; Work</a>
             <a href="#about">5-Phase Sprint Model</a>
             <a href="#pricing">Transparent Pricing</a>
@@ -1448,14 +1448,14 @@ function App() {
               <div>
                 <p className="footer-contact-label">Email</p>
                 <a
-                  href="mailto:hello.vardhanventures@gmail.com"
+                  href="mailto:info.prismix.digital@gmail.com"
                   onClick={() =>
                     trackEvent('email_click', {
-                      email: 'hello.vardhanventures@gmail.com',
+                      email: 'info.prismix.digital@gmail.com',
                     })
                   }
                 >
-                  hello.vardhanventures@gmail.com
+                  info.prismix.digital@gmail.com
                 </a>
               </div>
             </div>
@@ -1488,13 +1488,18 @@ function App() {
         </div>
 
         <div className="footer-bottom">
-          <small>© 2026 Vardhan Ventures Pvt. Ltd. All rights reserved.</small>
-          <div className="footer-bottom-links">
-            <a href="#top">Privacy Policy</a>
-            <span>·</span>
-            <a href="#top">Terms of Service</a>
-            <span>·</span>
-            <a href="#top">Security</a>
+          <small>
+            &copy; {new Date().getFullYear()} Prismix Digital. All rights
+            reserved.
+          </small>
+          <div className="footer-legal-links">
+            <a href="#about">About</a>
+            <span>&bull;</span>
+            <a href="#faq">FAQ</a>
+            <span>&bull;</span>
+            <a href="#contact">Privacy</a>
+            <span>&bull;</span>
+            <a href="#contact">Terms</a>
           </div>
         </div>
       </footer>

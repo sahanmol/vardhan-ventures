@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <rect width="400" height="400" fill="#141b3d"/>
-
-  <!-- Top V: pointing down -->
-  <path d="M 110 130 L 200 260 L 290 130"
-        fill="none" stroke="#d8ff3e" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Bottom V: pointing up (inverted), overlapping the top V in the middle -->
-  <path d="M 110 270 L 200 140 L 290 270"
-        fill="none" stroke="#d8ff3e" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="400" height="400" rx="90" fill="#ffffff" stroke="#dfe1e6" stroke-width="4" />
+  
+  <!-- 3D Prism Facet 1: Left Face (Royal Blue) -->
+  <polygon points="200,50 60,330 200,220" fill="#0052cc" stroke="#0052cc" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- 3D Prism Facet 2: Right Face (Electric Purple) -->
+  <polygon points="200,50 340,330 200,220" fill="#6554c0" stroke="#6554c0" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- 3D Prism Facet 3: Bottom Base (Electric Cyan) -->
+  <polygon points="60,330 340,330 200,220" fill="#00b8d9" stroke="#00b8d9" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- Center Core Highlight -->
+  <polygon points="200,120 236,220 200,200 164,220" fill="#ffffff" opacity="0.95" />
+  <circle cx="200" cy="50" r="14" fill="#00b8d9" />
 </svg>
