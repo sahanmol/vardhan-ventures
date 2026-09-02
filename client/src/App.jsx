@@ -248,10 +248,64 @@ function App() {
   const [status, setStatus] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [openFaq, setOpenFaq] = useState(0)
+  const [auditStatus, setAuditStatus] = useState('')
+  const [isAuditSubmitting, setIsAuditSubmitting] = useState(false)
   const lastSubmitTimeRef = useRef(0)
+  const lastAuditTimeRef = useRef(0)
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? -1 : index)
+  }
+
+  async function handleAuditSubmit(event) {
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const raw = Object.fromEntries(formData.entries())
+
+    const now = Date.now()
+    if (now - lastAuditTimeRef.current < 8000) {
+      setAuditStatus('Please wait a moment before submitting again.')
+      return
+    }
+
+    const email = sanitizeInput(raw.audit_email, 100)
+    const website = sanitizeInput(raw.audit_website, 200)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!email || !emailRegex.test(email) || !website) {
+      setAuditStatus('Please enter a valid website URL and email address.')
+      return
+    }
+
+    setIsAuditSubmitting(true)
+    setAuditStatus('')
+    lastAuditTimeRef.current = now
+
+    trackEvent('generate_lead', { form_name: 'free_audit', website })
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/info.prismix.digital@gmail.com',
+        {
+          method: 'POST',
+          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Free Audit Request',
+            email,
+            message: `Website to audit: ${website}`,
+            _subject: `🔍 Free Website Audit Request from ${email}`,
+            _captcha: 'false',
+          }),
+        },
+      )
+      if (!response.ok) throw new Error('failed')
+      setAuditStatus('success')
+      form.reset()
+    } catch {
+      setAuditStatus('success')
+    } finally {
+      setIsAuditSubmitting(false)
+    }
   }
 
   async function handleSubmit(event) {
@@ -831,7 +885,7 @@ function App() {
               demos, and battle-tested engineering across websites, AI
               automations, and performance marketing.
             </p>
-            
+
             <div className="build-highlights">
               <div className="build-highlight-item">
                 <CheckCircle2 size={16} className="highlight-icon" />
@@ -1101,7 +1155,7 @@ function App() {
                       })
                     }
                   >
-                    +91 94732 95260
+                    +91 85076 13284
                   </a>
                 </div>
               </div>
@@ -1264,6 +1318,75 @@ function App() {
                 Enjoy 30 days of dedicated complimentary post-launch support covering bug fixes, performance monitoring, and optimizations.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* ── Lead Magnet: Free Website Audit ─────────────────── */}
+        <section className="section lead-magnet" id="free-audit" aria-label="Free Website Audit">
+          <div className="lead-magnet-inner">
+            <div className="lead-magnet-badge">🎁 100% Free — No Credit Card</div>
+            <h2>
+              Get Your <span>Free Website Audit</span>
+              <br />in 24 Hours
+            </h2>
+            <p className="lead-magnet-sub">
+              Enter your website URL and email — we'll analyse your speed, SEO score,
+              mobile responsiveness, and design gaps, then send you a detailed report for free.
+            </p>
+
+            <div className="lead-magnet-pills">
+              <span>⚡ PageSpeed Score</span>
+              <span>🔍 SEO Audit</span>
+              <span>📱 Mobile Check</span>
+              <span>🎨 Design Review</span>
+            </div>
+
+            {auditStatus === 'success' ? (
+              <div className="audit-success">
+                <span className="audit-success-icon">✅</span>
+                <div>
+                  <strong>Request received!</strong>
+                  <p>We'll send your free audit report within 24 hours. Check your inbox!</p>
+                </div>
+              </div>
+            ) : (
+              <form className="lead-magnet-form" onSubmit={handleAuditSubmit} noValidate>
+                <div className="lead-magnet-fields">
+                  <div className="lm-field">
+                    <label htmlFor="audit_website">Your Website URL</label>
+                    <input
+                      id="audit_website"
+                      name="audit_website"
+                      type="url"
+                      placeholder="https://yourwebsite.com"
+                      required
+                    />
+                  </div>
+                  <div className="lm-field">
+                    <label htmlFor="audit_email">Your Email Address</label>
+                    <input
+                      id="audit_email"
+                      name="audit_email"
+                      type="email"
+                      placeholder="you@example.com"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="button primary lm-btn"
+                    disabled={isAuditSubmitting}
+                  >
+                    {isAuditSubmitting ? 'Sending...' : 'Get My Free Audit'}
+                    <ArrowUpRight size={17} />
+                  </button>
+                </div>
+                {auditStatus && auditStatus !== 'success' && (
+                  <p className="lm-error">{auditStatus}</p>
+                )}
+                <p className="lm-privacy">🔒 We respect your privacy. No spam, ever.</p>
+              </form>
+            )}
           </div>
         </section>
 
@@ -1472,7 +1595,7 @@ function App() {
                     })
                   }
                 >
-                  +91 94732 95260
+                  +91 85076 13284
                 </a>
               </div>
             </div>
