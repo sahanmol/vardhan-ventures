@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prismix-digitals.vercel.app/sitemap.xml
+Sitemap: https://www.prismix.tech/sitemap.xml
