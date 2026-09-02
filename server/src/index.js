@@ -86,5 +86,5 @@ if (process.env.MONGODB_URI) {
 }
 
 app.listen(port, () => {
-  console.log(`Vardhan Ventures API listening on ${port}`)
+  console.log(`Prismix Digital API listening on ${port}`)
 })

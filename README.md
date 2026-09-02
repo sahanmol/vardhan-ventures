@@ -1,6 +1,6 @@
-# Prismix 
+# Prismix Digital
 
-A MERN website for Vardhan Ventures, a digital studio focused on website development and digital marketing.
+A MERN website for Prismix Digital, a premier digital studio focused on website development, AI solutions, and digital marketing.
 
 ## Run locally
 

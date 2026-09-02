@@ -1093,11 +1093,11 @@ function App() {
                 <div>
                   <span className="quick-card-label">Call / WhatsApp</span>
                   <a
-                    href="tel:+919473295260"
+                    href="tel:+918507613284"
                     className="quick-card-val"
                     onClick={() =>
                       trackEvent('phone_call_click', {
-                        phone_number: '+919473295260',
+                        phone_number: '+918507613284',
                       })
                     }
                   >
@@ -1313,7 +1313,7 @@ function App() {
       {/* Floating WhatsApp Action */}
       <a
         className="whatsapp-float"
-        href="https://wa.me/919473295260?text=Hi%20Prismix%2C%20I%20want%20to%20discuss%20a%20project."
+        href="https://wa.me/918507613284?text=Hi%20Prismix%2C%20I%20want%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Prismix on WhatsApp"
@@ -1321,7 +1321,7 @@ function App() {
         onClick={() =>
           trackEvent('whatsapp_click', {
             location: 'floating_button',
-            phone: '+919473295260',
+            phone: '+918507613284',
           })
         }
       >
@@ -1393,7 +1393,7 @@ function App() {
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://www.facebook.com/prismix"
+                  href="https://www.facebook.com/share/194HE1AisF/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Follow Prismix on Facebook"
@@ -1404,7 +1404,7 @@ function App() {
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://wa.me/919473295260"
+                  href="https://wa.me/918507613284"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat on WhatsApp"
@@ -1465,10 +1465,10 @@ function App() {
               <div>
                 <p className="footer-contact-label">Call / WhatsApp</p>
                 <a
-                  href="tel:+919473295260"
+                  href="tel:+918507613284"
                   onClick={() =>
                     trackEvent('phone_call_click', {
-                      phone_number: '+919473295260',
+                      phone_number: '+918507613284',
                     })
                   }
                 >
